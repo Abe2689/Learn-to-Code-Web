@@ -1,18 +1,61 @@
 /* Selector{
 	Property: value;
-} */
+} 
+-------------SELECTORS-------------
+.class -> is common for different elements, 
+#id -> is specific for a particular element, 
+* -> means applies for all,  
+element (eg: body) -> only for that element,
+element, element (eg: h2, p) -> applies for both the elements,
+element element (eg: h2 p) -> means all p's that are inside h2,
+element > element (eg: h2 > p) -> means all p's whose parents were h2,
+element + element (eg: h2 + p) -> means select the p element right after h2, 
+selector:hover -> applied when the mouse pointer is hovered over the selector where it is written,
+selector:last-child,
+selector:first-child,
+!important -> (not recommended to use) It breaks the cascading rules 
+
+What selectors win out in the cascade depends on
+1. Specificity
+2. Importance -> (!important will win)
+3. Source Order -> if two styles are linked then the later one (second one in order) will win */
+
+* {
+    text-align: right;
+}
 
 body {
     background-image: url(img/background.jpg);
     background-size: cover;
 }
 
-h2 {
+h2 > p {
     color: #003D6B;
     text-align: center;
-    border: 5px solid rgba(169, 218, 255, 0.5); /*dashed, a- alpha number (0-1) for opacity*/
+    border: 5px solid rgba(169, 218, 255, 0.8); /*dashed, a- alpha number (0-1) for opacity*/
     cursor: pointer;
 }
+
+h2 + p:hover {
+    color: #003D6B;
+    text-align: center;
+    border: 5px solid rgba(169, 218, 255, 0.8); /*dashed, a- alpha number (0-1) for opacity*/
+    cursor: pointer;
+}
+
+/* h2 p {
+    color: #003D6B;
+    text-align: center;
+    border: 5px solid rgba(169, 218, 255, 0.8);
+    cursor: pointer;
+} */
+
+/* h2, p {
+    color: #003D6B;
+    text-align: center;
+    border: 5px solid rgba(169, 218, 255, 0.8);
+    cursor: pointer;
+} */
 
 p {
     color: pink;
@@ -26,4 +69,29 @@ p {
 li {
     list-style: none;
     display: inline-block;
+}
+
+.webtext:last-child {
+    border: 5px dashed green;
+}
+
+/* .webtext:first-child {
+    border: 5px dashed green;
+} */
+
+/* .webtext {
+    border: 5px dashed green;
+} */
+
+.active {
+    color: red;
+    border: 5px solid rgba(105, 253, 105, 0.5);
+}
+
+#firstdiv {
+    background-color: rgba(120, 120, 250, 0.5);
+}
+
+#seconddiv {
+    background-color: rgba(233, 74, 212, 0.5);
 }
