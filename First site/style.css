@@ -1,0 +1,13 @@
+/* Selector{
+	Property: value;
+} */
+h2 {
+    color: red;
+}
+p {
+    color: pink;
+}
+/* Cascading - picks the last one */
+p {
+    color: green;
+}
