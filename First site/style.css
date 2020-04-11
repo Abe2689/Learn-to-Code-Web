@@ -1,13 +1,29 @@
 /* Selector{
 	Property: value;
 } */
-h2 {
-    color: red;
+
+body {
+    background-image: url(img/background.jpg);
+    background-size: cover;
 }
+
+h2 {
+    color: #003D6B;
+    text-align: center;
+    border: 5px solid rgba(169, 218, 255, 0.5); /*dashed, a- alpha number (0-1) for opacity*/
+    cursor: pointer;
+}
+
 p {
     color: pink;
 }
+
 /* Cascading - picks the last one */
 p {
     color: green;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
 }
