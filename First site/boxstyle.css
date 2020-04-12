@@ -1,0 +1,31 @@
+h2 {
+    color: slateblue;
+}
+
+/* .boxmodel {
+    border: 5px solid red;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+} */
+
+/* .boxmodel {
+    border: 5px solid red;
+    display: inline-block;
+    padding: 5px 20px 5px 20px; /* top, right, bottom, left */ /*
+    margin: 0px 20px; /* top, right, bottom, left */ /*
+    width: 40px;
+    height: 50px;
+} */
+
+p {
+    font-size: 20px;
+}
+
+span {
+    font-size: 5rem; /* relative to the root element */
+}
+
+/* span {
+    font-size: 2em; /* relative to the one at present (2 times 20px ie. 40 px) */ /*
+} */

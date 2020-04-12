@@ -18,7 +18,23 @@ selector:first-child,
 What selectors win out in the cascade depends on
 1. Specificity
 2. Importance -> (!important will win)
-3. Source Order -> if two styles are linked then the later one (second one in order) will win */
+3. Source Order -> if two styles are linked then the later one (second one in order) will win 
+
+
+---------------Text and Fonts-------------------
+text-decoration: underline
+                line-through
+text-transform: uppercase
+                lowercase
+line-height: Xpx
+font-style: italic
+font-weight: bold (100-900)
+font-size: X%
+font-family: "Times New Roman", Georgia, ... -> Picks the first one if not available go to the second one
+
+--------------Image----------
+float: left (right) -> use clear:both for any property that need not to be the part of this image.
+*/
 
 * {
     text-align: right;
@@ -29,19 +45,40 @@ body {
     background-size: cover;
 }
 
-h2 > p {
+/* h2 > p {
+    color: #003D6B;
+    text-align: center;
+    border: 5px solid rgba(169, 218, 255, 0.8); 
+    cursor: pointer;
+} */
+
+p {
     color: #003D6B;
     text-align: center;
     border: 5px solid rgba(169, 218, 255, 0.8); /*dashed, a- alpha number (0-1) for opacity*/
     cursor: pointer;
+    line-height: 30px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 150%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-h2 + p:hover {
+img {
+    float: left;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+}
+
+/* h2 + p:hover {
     color: #003D6B;
     text-align: center;
-    border: 5px solid rgba(169, 218, 255, 0.8); /*dashed, a- alpha number (0-1) for opacity*/
+    border: 5px solid rgba(169, 218, 255, 0.8);
     cursor: pointer;
-}
+} */
 
 /* h2 p {
     color: #003D6B;
@@ -57,14 +94,14 @@ h2 + p:hover {
     cursor: pointer;
 } */
 
-p {
+/* p {
     color: pink;
-}
+} */
 
 /* Cascading - picks the last one */
-p {
+/* p {
     color: green;
-}
+} */
 
 li {
     list-style: none;
