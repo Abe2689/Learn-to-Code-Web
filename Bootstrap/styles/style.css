@@ -1,0 +1,12 @@
+.btn-primary {
+    background-color: orange;
+}
+
+.btn-primary:hover {
+    background-color: orangered;
+}
+
+.col {
+    background-color: floralwhite;
+    border: palevioletred 2px solid;
+}
